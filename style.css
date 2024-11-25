@@ -1,5 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
 :root {
   font-size: 62.5%;
@@ -18,12 +19,16 @@
 * {
   box-sizing: border-box;
 }
-
+canvas {
+  pointer-events: none;
+}
 body {
   display: grid;
   /* place-content: center; */
   /* height: 100vh; */
   font-family: sans-serif;
+  overflow: hidden;
+  min-height: 100vh;
 }
 h1 {
   font-size: 3rem;
@@ -53,6 +58,12 @@ main {
         font-weight: 700;
       }
       div {
+        opacity: 0;
+        animation-name: bounceIn;
+        animation-delay: 300ms;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards;
+
         margin: 3rem auto;
         border-radius: 50%;
         width: 45%;
@@ -83,11 +94,19 @@ main {
         width: 70%;
         margin: 1rem auto;
       }
+      h2,
+      p {
+        animation-name: fadeInDown;
+        animation-duration: 400ms;
+      }
       * {
         color: white;
       }
     }
     &[b] {
+      * {
+        animation-fill-mode: forwards;
+      }
       background-color: white;
       text-align: left;
       display: grid;
@@ -99,6 +118,7 @@ main {
         margin: 3rem 0;
         display: grid;
         gap: 2rem;
+
         li {
           display: flex;
           align-items: center;
@@ -106,6 +126,10 @@ main {
           background-color: white;
           gap: 1.5rem;
           padding: 2rem;
+
+          opacity: 0;
+          animation-name: fadeInRight;
+          animation-duration: 500ms;
 
           strong {
             color: black;
@@ -130,6 +154,7 @@ main {
             }
           }
           &:nth-child(2) {
+            animation-delay: 500ms;
             background-color: color-mix(
               in hsl,
               var(--OrangeyYellow),
@@ -140,6 +165,7 @@ main {
             }
           }
           &:nth-child(3) {
+            animation-delay: 1000ms;
             background-color: color-mix(
               in hsl,
               var(--GreenTeal),
@@ -150,6 +176,7 @@ main {
             }
           }
           &:nth-child(4) {
+            animation-delay: 1500ms;
             background-color: color-mix(
               in hsl,
               var(--CobaltBlue),

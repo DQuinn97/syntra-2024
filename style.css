@@ -178,9 +178,40 @@ main {
     }
   }
 }
-@media (min-width=385px) {
+@media (min-width: 700px) {
+  :root {
+    font-size: 70%;
+  }
+  body {
+    padding: 3rem;
+    place-items: center;
+    min-height: 100vh;
+  }
   main {
+    max-width: 750px;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 1rem 1rem 3rem 0rem
+      color-mix(in hsl, var(--LightLavender), transparent 50%);
+    border-radius: 3rem;
+    overflow: hidden;
     section {
+      &[a] {
+        border-radius: 3rem;
+        div {
+          width: 57%;
+          h3 {
+            font-size: 6rem;
+          }
+          p {
+            font-size: 1.5rem;
+          }
+        }
+        p {
+          width: 85%;
+        }
+      }
+      &[b] {
+      }
     }
   }
 }

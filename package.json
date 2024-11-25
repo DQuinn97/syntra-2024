@@ -6,8 +6,10 @@
     "dev": "vite --open --host",
     "build": "vite build",
     "preview": "vite preview --open --host",
-    "deploy": "surge ./dist quinten-s2024-design3.surge.sh",
-    "postdeploy": "start chrome https://quinten-s2024-design3.surge.sh"
+    "deploy-main": "surge ./dist quinten-s2024-design3.surge.sh",
+    "postdeploy-main": "start chrome https://quinten-s2024-design3.surge.sh",
+    "deploy-dev": "surge ./dist quinten-s2024-design3-test.surge.sh",
+    "postdeploy-dev": "start chrome https://quinten-s2024-design3-test.surge.sh"
   },
   "keywords": [],
   "author": "",
